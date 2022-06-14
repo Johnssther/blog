@@ -16,7 +16,8 @@
         <section class="header-icons-container">
             <div class="icons">
                 <a href="https://github.com/Johnssther"><span class="flaticon-003-whatsapp"></span></a> <!-- Twitter -->
-                <a href="https://www.linkedin.com/in/john-alejandro-hernandez-3b28827a/"><span class="flaticon-010-linkedin"></span></a> <!-- Linkendlin -->
+                <a href="https://www.linkedin.com/in/john-alejandro-hernandez-3b28827a/"><span
+                        class="flaticon-010-linkedin"></span></a> <!-- Linkendlin -->
                 <a href="assets/CV John Alejandro.pdf"><span class="flaticon-001-facebook"></span></a> <!-- Facebook -->
             </div>
         </section>
@@ -36,72 +37,14 @@
     <main class="blogs-main">
         <section class="blogs-news-container">
             <div class="grid-container">
-                <div class="blogs-main-news">
-                    <h3>Posts</h3>
-                    <div class="blogs-news-img-container">
-                        <img loading="lazy" src="assets/img/main-news-img.png" alt="Nuevo post">
-                    </div>
-                    <div class="blogs-new-info-container">
-                        <h2>Puntos de autopago, Smile ID y omnicanalidad: las innovaciones del Grupo Éxito</h2>
-                        <p>En la primera versión del Tech Day Grupo Éxito, la empresa mostró avances en transformación
-                            digital, innovación social y...</p>
-                        <a href="blog.html" class="blogs-button">Leer mas</a>
-                    </div>
+                <div class="blogs-main-news" id="blogpost-main">
+                    <!-- Article Main -->
                 </div>
             </div>
         </section>
         <section class="blogs-posts-container">
-            <div class="grid-container">
-                <h3>Últimos Blogposts</h3>
-                <article class="post-container">
-                    <img loading="lazy" src="https://cdn.pixabay.com/photo/2017/08/10/04/15/android-2618093_960_720.jpg"
-                        alt="">
-                    <p class="post-container-title">Spotify entrará en el negocio de los audiolibros</p>
-                    <p>Con este nuevo mercado, Daniel Ek, CEO de la plataforma, estima que Spotify está ante una
-                        oportunidad anual de US$70.000 millones (más de 66.600 millones de euros).</p>
-                    <a href="blog.html" class="blogs-button">Leer mas</a>
-                </article>
-                <article class="post-container">
-                    <img loading="lazy"
-                        src="https://cdn.pixabay.com/photo/2014/11/30/12/06/guinea-pig-551479_960_720.jpg" alt="">
-                    <p class="post-container-title">¿Pasa mucho tiempo en TikTok? La aplicación le pedirá un descanso
-                    </p>
-                    <p>TikTok ampliará las funciones de su aplicación móvil con un recordatorio que instará a los
-                        usuarios a tomar un descanso de la red social. Esta es una de las dos nuevas...</p>
-                    <a href="blog.html" class="blogs-button">Leer mas</a>
-                </article>
-                <article class="post-container">
-                    <img loading="lazy" src="assets/img/post-1.png" alt="">
-                    <p class="post-container-title">Realidad aumentada</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ad debitis rem repellat magni
-                        accusantium? Tempora illo nihil nemo quas eligendi blanditiis ab magnam, tenetur porro mollitia
-                        architecto fugiat. Autem? lorem*100</p>
-                    <a href="blog.html" class="blogs-button">Leer mas</a>
-                </article>
-                <article class="post-container">
-                    <img loading="lazy" src="assets/img/post-1.png" alt="">
-                    <p class="post-container-title">Realidad aumentada</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ad debitis rem repellat magni
-                        accusantium? Tempora illo nihil nemo quas eligendi blanditiis ab magnam, tenetur porro mollitia
-                        architecto fugiat. Autem? lorem*100</p>
-                    <a href="blog.html" class="blogs-button">Leer mas</a>
-                </article>
-                <article class="post-container">
-                    <img loading="lazy" src="assets/img/post-3.png" alt="">
-                    <p class="post-container-title">Realidad aumentada</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ad debitis rem repellat magni
-                        accusantium? Tempora illo nihil nemo quas eligendi blanditiis ab magnam, tenetur porro mollitia
-                        architecto fugiat. Autem? lorem*100</p>
-                    <a href="blog.html" class="blogs-button">Leer mas</a>
-                </article>
-                <article class="post-container">
-                    <img loading="lazy" src="assets/img/post-2.png" alt="">
-                    <p class="post-container-title">Realidad aumentada</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ad debitis rem repellat magni
-                        accusantium? Tempora illo nihil nemo quas eligendi blanditiis ab magnam, tenetur porro mollitia
-                        architecto fugiat. Autem? lorem*100</p>
-                    <a href="blog.html" class="blogs-button">Leer mas</a>
-                </article>
+            <div class="grid-container" id="articles">
+                <!-- Articles -->
             </div>
         </section>
     </main>
@@ -111,6 +54,49 @@
     <script>
         const year = new Date().getFullYear();
         document.getElementById('copyright').innerHTML = `Copyright © 2020 - ${year} Desarrollado por John Alejandro`;
+
+        const getNews = async () => {
+            const API_KEY = '557eab41fe1d44ab950e4d182bc487c1';
+            const country = 'co';
+            const language = 'es';
+            const category = 'technology';
+
+            const url = `https://newsapi.org/v2/top-headlines?language=${language}&category=${category}&apiKey=${API_KEY}`
+
+            const res = await fetch(url);
+            const data = await res.json();
+            console.log(data);
+            const blog = data.articles[0];
+
+            // Blog main
+            let blogMain = `
+                <h3>Posts</h3>
+                <div class="blogs-news-img-container">
+                    <img loading="lazy" src="${blog.urlToImage}" alt="${blog.title}">
+                </div>
+                <div class="blogs-new-info-container">
+                    <h2>${blog.title}</h2>
+                    <p>${blog.description}</p>
+                    <a href="${blog.url}" target="_blank" class="blogs-button">Leer mas</a>
+                </div>
+            `;
+            document.getElementById('blogpost-main').innerHTML = blogMain
+
+            // Blogs
+            let html = `<h3>Últimos Blogposts</h3>`;
+            data.articles.map((item) => {
+                html += `
+                <article class="post-container">
+                    <img loading="lazy" src="${item.urlToImage}" alt="${item.title}">
+                    <p class="post-container-title">${item.title}</p>
+                    <p>${item.description}</p>
+                    <a href="${item.url}" target="_blank" class="blogs-button">Leer mas</a>
+                </article>
+                `;
+            })
+            document.getElementById('articles').innerHTML = html
+        }
+        getNews()
     </script>
 </body>
 
