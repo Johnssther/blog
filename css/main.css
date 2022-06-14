@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto+Slab:400,700|Roboto:400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
 
+/* icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 /* global */
 body {
-    font-family: 'Roboto mono', 'monospace';
+    /* font-family: 'Roboto mono', 'monospace'; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    letter-spacing: 1px;
+    word-spacing: 5px;
 }
 
 a {
@@ -31,7 +39,7 @@ a {
 
 header {
     width: 100%;
-    height: 170px;
+    height: 130px;
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
@@ -44,7 +52,7 @@ header .header-icons-container {
 }
 
 header .header-icons-container .icons {
-    width: 300px;
+    width: 150px;
     height: auto;
     display: flex;
     justify-items: flex-end;
@@ -52,6 +60,7 @@ header .header-icons-container .icons {
     justify-content: space-between;
     justify-self: end;
     margin-right: 50px;
+    font-size: 1.9rem;
 }
 
 header .icons span {
@@ -61,18 +70,23 @@ header .icons span {
 nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 110px;
+    height: 80px;
+    background-color: #E6E9ED;
 }
 
 nav .nav-logo-container {
     margin-left: 50px;
 }
-
-nav .nav-logo-container img {
-    width: 220px;
-    margin-top: 10px;
+.nav-logo-container-image {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
 }
-
+nav .nav-logo-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
 nav .profile-link {
     display: flex;
     align-items: center;
@@ -84,6 +98,7 @@ nav .profile-link a {
     color: black;
     border-bottom: 1px solid black;
 }
+
 
 /*  home main */
 .home-main {
@@ -118,19 +133,17 @@ nav .profile-link a {
     width: 110px;
     height: 50px;
     background-color: #F7BA44;
-    border: none;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    transition: all 1s ease-in;
 }
 
 .home-main-button:hover {
     border: 2px solid #F7BA44;
     background-color: #ffffff55;
+    transition:  background-color 1s ease-in;
 }
-
-.home-main-button a {
-    font-weight: 700;
-    font-size: 18px;
-}
-
 
 /* blogs main */
 
@@ -216,6 +229,7 @@ footer p {
 
 /* Page Blog */
 .blogpost-img-container {
+    margin-top: 10px;
     padding: 0 50px 40px;
 }
 
