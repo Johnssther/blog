@@ -56,16 +56,10 @@
         document.getElementById('copyright').innerHTML = `Copyright © 2020 - ${year} Desarrollado por John Alejandro`;
 
         const getNews = async () => {
-            const API_KEY = '557eab41fe1d44ab950e4d182bc487c1';
-            const country = 'co';
-            const language = 'es';
-            const category = 'technology';
-
-            const url = `https://newsapi.org/v2/top-headlines?language=${language}&category=${category}&apiKey=${API_KEY}`
+            const url = `http://129.146.185.172/safeapp-api/public/api/v1/news`
 
             const res = await fetch(url);
             const data = await res.json();
-            console.log(data);
             const blog = data.articles[0];
 
             // Blog main
