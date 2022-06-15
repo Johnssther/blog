@@ -320,4 +320,10 @@ footer p {
 }
 .project-container {
     padding: 0 5px;
+    margin: 5px;
+    background-color: #E6E9ED;
+    border-radius: 5px;
+}
+.project-container img{
+    width: 100%;
 }
