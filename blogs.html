@@ -43,7 +43,8 @@
             </div>
         </section>
         <section class="blogs-posts-container">
-            <div class="grid-container" id="articles">
+            <h3>Últimos Blogposts</h3>
+            <div class="grid-container posts-container" id="articles">
                 <!-- Articles -->
             </div>
         </section>
@@ -56,10 +57,20 @@
         document.getElementById('copyright').innerHTML = `Copyright © 2020 - ${year} Desarrollado por John Alejandro`;
 
         const getNews = async () => {
-            const url = `http://129.146.185.172/safeapp-api/public/api/v1/news`
+            const url = `https://newsapi.org/v2/top-headlines?language=es&category=technology&apiKey=557eab41fe1d44ab950e4d182bc487c1`
+            // const url = 'https://newsapi.org/v2/top-headlines?language=es&category=technology&apiKey=557eab41fe1d44ab950e4d182bc487c1'
 
+            /*
             const res = await fetch(url);
             const data = await res.json();
+            */
+           
+        //    localStorage.setItem("data", JSON.stringify(data));
+           const data = JSON.parse(localStorage.getItem("data"));
+           console.log(data);
+
+
+            
             const blog = data.articles[0];
 
             // Blog main
@@ -77,12 +88,15 @@
             document.getElementById('blogpost-main').innerHTML = blogMain
 
             // Blogs
-            let html = `<h3>Últimos Blogposts</h3>`;
+            let html = ``;
             data.articles.map((item) => {
                 html += `
                 <article class="post-container">
                     <img loading="lazy" src="${item.urlToImage}" alt="${item.title}">
-                    <p class="post-container-title">${item.title}</p>
+                    <p class="post-container-title">
+                        ${item.title}
+                        <br><span>${new Date(item.publishedAt).toLocaleDateString('es-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"})}</span> 
+                    </p>
                     <p>${item.description}</p>
                     <a href="${item.url}" target="_blank" class="blogs-button">Leer mas</a>
                 </article>

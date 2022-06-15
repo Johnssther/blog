@@ -193,18 +193,26 @@ nav .profile-link a {
     padding: 10px 15px;
     font-size: 12px;
 }
-
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
 .blogs-posts-container .post-container {
     display: inline-block;
     padding-left: 10px;
-    max-width: 30%;
+    max-width: 100%;
     margin-bottom: 50px;
 }
 
 .post-container-title {
     font-weight: 700;
 }
-
+.post-container-title span{
+    color: #727375;
+    font-weight: normal;
+    font-size: 12px;
+}
 .blogs-posts-container .post-container p {
     margin-bottom: 35px;
 }
