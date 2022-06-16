@@ -326,4 +326,11 @@ footer p {
 }
 .project-container img{
     width: 100%;
+    transition: all 1s ease;
+}
+.project-container img:hover{
+    transform: scale(1.7);
+    transition: all 1s ease;
+    cursor: pointer;
+    border-radius: 1rem;
 }
