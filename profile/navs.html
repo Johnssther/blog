@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <sidebar class="sidebar sidebar--active" id="sidebar">
+    <sidebar class="sidebar" id="sidebar">
         <div class="sidebar__close">
             <div class="sidebar__close_title">
                 <span>App</span>Test
@@ -43,17 +43,99 @@
                 </div>
             </div>
             <div class="sidebar__content_item">
-                <ul class="list">
-                    <li class="list__item">Profile</li>
-                    <li class="list__item list__item--active">Navs</li>
-                    <li class="list__item">Cards</li>
-                    <li class="list__item">Modals</li>
-                    <li class="list__item">Form</li>
-                    <li class="list__item">Progress</li>
-                </ul>
+                <div class="container">
+                    <ul class="list-group">
+                        <a class="text-decoration-none text-dark" data-bs-toggle="collapse"
+                            href="#multiCollapseExample1" role="button" aria-expanded="false"
+                            aria-controls="multiCollapseExample1">
+                            <li class="list-group-item bg-dark text-white d-flex justify-content-center">
+                                <i class="bi bi-person-circle"></i>
+                                Components
+                                <i class="bi bi-arrow-right-short"></i>
+                            </li>
+                        </a>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                    <ul class="list-group">
+                                        <a href="/navs.html" class="text-decoration-none">
+                                            <li class="list-group-item">Navs</li>
+                                        </a>
+                                        <a href="/forms.html" class="text-decoration-none">
+                                            <li class="list-group-item">Form</li>
+                                        </a>
+                                        <a href="/buttons.html" class="text-decoration-none">
+                                            <li class="list-group-item">Buttons</li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="text-decoration-none text-dark" data-bs-toggle="collapse" href="#multiCollapseSales"
+                            role="button" aria-expanded="false" aria-controls="multiCollapseSales">
+                            <li class="list-group-item bg-dark text-white d-flex justify-content-center">
+                                <i class="bi bi-person-circle"></i>
+                                Ventas
+                                <i class="bi bi-arrow-right-short"></i>
+                            </li>
+                        </a>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseSales">
+                                    <!-- ... -->
+                                    <ul class="list-group">
+                                        <a class="text-decoration-none text-dark" data-bs-toggle="collapse"
+                                            href="#multiCollapseExample2" role="button" aria-expanded="false"
+                                            aria-controls="multiCollapseExample2">
+                                            <li
+                                                class="list-group-item bg-secondary text-white d-flex justify-content-center">
+                                                <i class="bi bi-person-circle"></i>
+                                                Components
+                                                <i class="bi bi-arrow-right-short"></i>
+                                            </li>
+                                        </a>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item">Navs</li>
+                                                        <li class="list-group-item">Form</li>
+                                                        <li class="list-group-item">Buttons</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="text-decoration-none text-dark" data-bs-toggle="collapse"
+                                            href="#multiCollapseSales1" role="button" aria-expanded="false"
+                                            aria-controls="multiCollapseSales1">
+                                            <li
+                                                class="list-group-item bg-secondary text-white d-flex justify-content-center">
+                                                <i class="bi bi-person-circle"></i>
+                                                Ventas
+                                                <i class="bi bi-arrow-right-short"></i>
+                                            </li>
+                                        </a>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="collapse multi-collapse" id="multiCollapseSales1">
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item">Usuarios</li>
+                                                        <li class="list-group-item">Roles</li>
+                                                        <li class="list-group-item">Clientes</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    <!-- ... -->
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
             </div>
             <div class="sidebar__content_item">
-                
+
             </div>
         </div>
     </sidebar>

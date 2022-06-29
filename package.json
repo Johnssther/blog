@@ -1,0 +1,28 @@
+{
+  "name": "devjah",
+  "version": "1.0.0",
+  "description": "devjah is library css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Johnssther/blog.git"
+  },
+  "keywords": [
+    "blog",
+    "css",
+    "bootrap",
+    "flexbox",
+    "grid",
+    "layout",
+    "template"
+  ],
+  "author": "John Hernandez R",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Johnssther/blog/issues"
+  },
+  "homepage": "https://github.com/Johnssther/blog#readme"
+}

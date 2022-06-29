@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    // border: 1px solid red;
 }
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 
@@ -12,6 +13,8 @@
 @import "../components/sidebar";
 @import "../components/header";
 @import "../components/btn";
+@import "../components/list";
+@import "../components/divider";
 
 body {
     background-color: rgb(223, 229, 235);
