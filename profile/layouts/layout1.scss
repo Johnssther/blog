@@ -30,6 +30,10 @@ body {
     &__item1 {
         grid-column: 1 / 5;
     }
+    &__itemForm {
+        grid-column: 1 / 4;
+        grid-row: 2 / 4;
+    }
 }
 
 @media only screen and (max-width: 900px) {
