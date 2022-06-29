@@ -53,7 +53,7 @@
                 </ul>
             </div>
             <div class="sidebar__content_item">
-                
+
             </div>
         </div>
     </sidebar>
@@ -63,6 +63,9 @@
                 <button class="btn-sei" id="btn-open">
                     <i class="bi bi-arrow-right-short"></i>
                 </button>
+                <div class="notifications" data-bs-toggle="modal" href="#notificationsModalToggle" role="button">
+                    <i class="bi bi-bell-fill"></i>
+                </div>
             </header>
         </div>
         <div class="grid-container__itemForm container">
@@ -144,6 +147,41 @@
         </div>
         <div class="grid-container__item">
 
+        </div>
+    </div>
+
+    <div class="modal fade" id="notificationsModalToggle" aria-hidden="true"
+        aria-labelledby="notificationsModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-dark">
+                    <h5 class="modal-title" id="notificationsModalToggleLabel">Notificaciones <i class="bi bi-bell-fill"></i> </h5>
+                    <button type="button" class="btn-close color-dark" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="badge bg-warning rounded-pill text-dark">12</span>
+                            <a href="" class="text-decoration-none text-dark">Mensajes</a>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge bg-warning rounded-pill text-dark">2</span>
+                            <a href="" class="text-decoration-none text-dark">Llamadas</a>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge bg-warning rounded-pill text-dark">4</span>
+                            <a href="" class="text-decoration-none text-dark">Notificaciones</a>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge bg-warning rounded-pill text-dark">1</span>
+                            <a href="" class="text-decoration-none text-dark">Autorizaciones</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    
+                </div>
+            </div>
         </div>
     </div>
 

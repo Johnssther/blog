@@ -1,0 +1,16 @@
+.notifications {
+    height: 100%;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    &:hover {
+        background-color: red;
+    }
+    cursor: pointer;
+    i {
+        font-size: 1.4rem;
+        color: white;
+    }
+}

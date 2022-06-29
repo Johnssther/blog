@@ -97,9 +97,9 @@ img {
   bottom: 0;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
-  background-color: #ffffff;
   z-index: 100;
   border-right: 1px solid #dddddd;
+  background-color: #ffffff;
 }
 
 .sidebar__close {
@@ -159,9 +159,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -248,6 +248,31 @@ hr {
   border: 1px solid red;
   margin: 0;
   padding: 0;
+}
+
+.notifications {
+  height: 100%;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  cursor: pointer;
+}
+
+.notifications:hover {
+  background-color: red;
+}
+
+.notifications i {
+  font-size: 1.4rem;
+  color: white;
 }
 
 body {
