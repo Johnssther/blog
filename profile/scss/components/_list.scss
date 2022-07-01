@@ -39,8 +39,3 @@
     }
 }
 
-@mixin boton($fondo,$letra) {
-    @extend %boton;
-    background: $fondo;
-    color: $letra;
- }

@@ -1,0 +1,29 @@
+
+input {
+    height: 3rem;
+    margin: 5px;
+    outline: 1px solid rgb(209, 184, 235);
+    width: 100%;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    &:focus {
+        outline: 1px solid #80a921;
+    }
+}
+
+button {
+    border: none;
+    background-color: orange;
+    color: white;
+    &:hover {
+        background-color: rgb(73, 128, 153);
+    }
+}
+
+.btn--google {
+background-color: #4CA954;
+}
+.btn--facebook {
+    background-color: #2586EE;
+}
