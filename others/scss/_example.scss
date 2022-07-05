@@ -1,0 +1,47 @@
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(8, 3.5rem);
+    gap: 3px;
+    &__item {
+        background-color: bisque;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 9px;
+        &--head {
+            background-color: rebeccapurple;
+            color: #fff;
+        }
+        &--festive {
+            background-color: rgb(181, 181, 241);
+            &:hover {
+                background-color: rgb(214, 241, 181);
+            }
+        }
+    }
+    &__item:nth-child(1) {
+        grid-column: span 7;
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        div {
+            i:hover {
+                color: yellow;
+            }
+        }
+    }
+}
+
+.services {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 12rem);
+    gap: 3px;
+    &__item {
+        background-color: red;
+    }
+}
