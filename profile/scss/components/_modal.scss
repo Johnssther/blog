@@ -1,0 +1,50 @@
+.modal_content {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.452);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--hidden {
+        visibility: hidden;
+    }
+}
+.modal {
+    width: 50vw;
+    height: 50%;
+    background-color: #fff;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: transform 500ms;
+    &--close {
+        transform: translateY(160%);
+    }
+    &__header {
+        background-color: rebeccapurple;
+        height: 10%;
+        width: 100%;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        font-size: 21px;
+        text-transform: capitalize;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        i {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.7rem;
+            cursor: pointer;
+            &:hover {
+                color: rgb(243, 232, 73);
+            }
+        }
+    }
+}
