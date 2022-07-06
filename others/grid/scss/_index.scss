@@ -7,6 +7,7 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
+    margin-top: 1rem;
 }
 .grid-explicit {
     display: grid;
@@ -36,6 +37,23 @@ body {
         grid-row: 4 / span 3;
         grid-column: 3 / span 2;
     } 
+}
+
+.gridLineName {
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(6, 9rem);
+    grid-template-columns:[line-c1] 1fr [line-c2] 1fr [line-c3] 1fr;
+    grid-template-rows: [line-r1] 9rem [line-r2] 9rem [line-r3] 9rem;
+    
+    &__item {
+        border: 1px solid orange;
+    }
+    &__item:nth-child(3) { 
+        background-color: cyan;
+        grid-column: line-c1 / line-c3;
+        grid-row: line-r3 / line-r3;
+    }
 }
 
 img {

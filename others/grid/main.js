@@ -46,13 +46,13 @@ function renderCalendar(date) {
             </div>
         </div>
 
-        <div class="calendar__item calendar__item--head">Domingo</div>
-        <div class="calendar__item calendar__item--head">Lunes</div>
-        <div class="calendar__item calendar__item--head">Martes</div>
-        <div class="calendar__item calendar__item--head">Miercoles</div>
-        <div class="calendar__item calendar__item--head">Jueves</div>
-        <div class="calendar__item calendar__item--head">Viernes</div>
-        <div class="calendar__item calendar__item--head">Sabado</div>
+        <div class="calendar__item calendar__item--head">D</div>
+        <div class="calendar__item calendar__item--head">L</div>
+        <div class="calendar__item calendar__item--head">M</div>
+        <div class="calendar__item calendar__item--head">M</div>
+        <div class="calendar__item calendar__item--head">J</div>
+        <div class="calendar__item calendar__item--head">V</div>
+        <div class="calendar__item calendar__item--head">S</div>
 
     `;
 
