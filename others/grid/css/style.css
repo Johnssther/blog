@@ -1,10 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(255, 255, 255);
 }
 
 .container {
   width: 80%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.container-fluid {
+  width: 100%;
   margin: 0 auto;
   margin-top: 1rem;
 }
@@ -86,7 +99,6 @@ button:hover {
 }
 
 .calendar {
-  margin-top: 1rem;
   background-color: #fff;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -99,16 +111,17 @@ button:hover {
   justify-content: center;
   align-items: center;
   border-radius: 9px;
+  height: 3.5rem;
 }
 .calendar__item--head {
   background-color: rebeccapurple;
   color: #fff;
 }
 .calendar__item--festive {
-  background-color: rgb(181, 181, 241);
+  background-color: #e29536;
 }
 .calendar__item--festive:hover {
-  background-color: rgb(214, 241, 181);
+  background-color: #e29536;
 }
 .calendar__item:nth-child(1) {
   grid-column: span 7;
@@ -164,7 +177,7 @@ button:hover {
   border-radius: 12px;
 }
 .options__item:hover {
-  background-color: rgb(54, 231, 54);
+  background-color: #e29536;
 }
 .options__item i {
   font-size: 24px;
@@ -179,7 +192,6 @@ button:hover {
 }
 
 .testimonials {
-  margin-bottom: 10rem;
   background-color: #DDD7FA;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 10rem));
@@ -226,13 +238,77 @@ button:hover {
     grid-row: span 2;
   }
 }
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  background-color: #DDD7FA;
+  gap: 5px;
+}
+.profile__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile__item_img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgb(124, 74, 175);
+  padding: 3px;
+}
+.profile__item:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 5px;
+  padding: 1rem;
+}
+
+.information {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 7px;
+}
+.information i {
+  font-size: 2rem;
+}
+.information p {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 1rem;
+  height: 10rem;
+  background-color: #323232;
+  color: #DDD7FA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .subtitle {
   display: inline-block;
   border-bottom: 1px solid black;
   color: #323232;
 }
 
-* {
-  font-family: Arial, Helvetica, sans-serif;
-  font-family: "Manrope", sans-serif;
+@media only screen and (min-width: 900px) {
+  .profile__item:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, auto);
+    gap: 5px;
+    padding: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
