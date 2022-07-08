@@ -99,3 +99,12 @@ function dayName(day) {
     let dias = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
     return dias[day]
 }
+
+
+// sidebar
+document.getElementById('btn-close').addEventListener('click', () => {
+    document.getElementById('sidebar').classList.add('sidebar--active');
+})
+document.getElementById('btn-open').addEventListener('click', () => {
+    document.getElementById('sidebar').classList.remove('sidebar--active');
+})

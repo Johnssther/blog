@@ -1,3 +1,4 @@
+// sidebar
 document.getElementById('btn-close').addEventListener('click', () => {
     document.getElementById('sidebar').classList.add('sidebar--active');
 })
