@@ -104,7 +104,10 @@ function dayName(day) {
 // sidebar
 document.getElementById('btn-close').addEventListener('click', () => {
     document.getElementById('sidebar').classList.add('sidebar--active');
+    document.getElementById('body').classList.remove('block-scroll');
 })
-document.getElementById('btn-open').addEventListener('click', () => {
+document.getElementById('btn-open').addEventListener('click', (e) => {
+    e.preventDefault();
     document.getElementById('sidebar').classList.remove('sidebar--active');
+    document.getElementById('body').classList.add('block-scroll');
 })

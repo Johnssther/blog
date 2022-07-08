@@ -244,6 +244,9 @@ button:hover {
   grid-template-rows: repeat(2, auto);
   background-color: #DDD7FA;
   gap: 5px;
+  background-color: #e5e5f7;
+  background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
 }
 .profile__item {
   display: flex;
@@ -251,8 +254,8 @@ button:hover {
   align-items: center;
 }
 .profile__item_img {
-  width: 20rem;
-  height: 20rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid rgb(124, 74, 175);
@@ -278,12 +281,12 @@ button:hover {
   border-radius: 7px;
 }
 .information i {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .information p {
   margin: 0;
   padding: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -360,10 +363,17 @@ footer {
   grid-template-rows: auto repeat(2, 1fr);
   gap: 1rem;
 }
+.sidebar__content:nth-child(2) {
+  overflow: scroll;
+}
 
 .sidebar--active {
   transform: translate(-105%);
   transition: all 1s ease;
+}
+
+.block-scroll {
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 1200px) {
