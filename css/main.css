@@ -3,12 +3,16 @@
 
 /* icons */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
-/* global */
-body {
-    /* font-family: 'Roboto mono', 'monospace'; */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+/* global */
+body {
+    /* font-family: 'Roboto mono', 'monospace'; */
 
     font-family: 'Raleway', sans-serif;
     font-weight: normal;
@@ -52,7 +56,7 @@ header .header-icons-container {
 }
 
 header .header-icons-container .icons {
-    width: 150px;
+    width: 49px;
     height: auto;
     display: flex;
     justify-items: flex-end;
@@ -77,16 +81,19 @@ nav {
 nav .nav-logo-container {
     margin-left: 50px;
 }
+
 .nav-logo-container-image {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
 }
+
 nav .nav-logo-container img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
 }
+
 nav .profile-link {
     display: flex;
     align-items: center;
@@ -142,7 +149,7 @@ nav .profile-link a {
 .home-main-button:hover {
     border: 2px solid #F7BA44;
     background-color: #ffffff55;
-    transition:  background-color 1s ease-in;
+    transition: background-color 1s ease-in;
 }
 
 /* blogs main */
@@ -193,11 +200,13 @@ nav .profile-link a {
     padding: 10px 15px;
     font-size: 12px;
 }
+
 .posts-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
+
 .blogs-posts-container .post-container {
     display: inline-block;
     padding-left: 10px;
@@ -208,11 +217,13 @@ nav .profile-link a {
 .post-container-title {
     font-weight: 700;
 }
-.post-container-title span{
+
+.post-container-title span {
     color: #727375;
     font-weight: normal;
     font-size: 12px;
 }
+
 .blogs-posts-container .post-container p {
     margin-bottom: 35px;
 }
@@ -223,7 +234,7 @@ nav .profile-link a {
 
 footer {
     width: 100%;
-    height: 80px;
+    height: 110px;
     background-color: #22272d;
     border-top: 35px solid #F7BA44;
     text-align: center;
@@ -231,7 +242,7 @@ footer {
 
 footer p {
     margin-top: 30px;
-    color: white;
+    color: #DDD7FA;
 }
 
 
@@ -276,8 +287,9 @@ footer p {
 .contact-main-container div a {
     border-bottom: 1px solid black;
     padding-bottom: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
 }
-
 .contact-main-container .contact-left,
 .contact-right {
     text-align: initial;
@@ -297,40 +309,98 @@ footer p {
 }
 
 .profile-main-container img {
-    width: 320px;
+    width: 220px;
+    height: 220px;
     margin-right: 30px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .profile-main-container .profile-container {
     display: flex;
+    align-items: center;
 }
 
 .profile-main-projects {
     padding: 0 50px 40px;
 }
+
 .profile-main-projects h3 {
     border-bottom: 1px solid #cdd2da;
     padding-bottom: 35px;
+    margin-bottom: 35px;
     text-align: center;
 }
 
 .projects-main-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
+
 .project-container {
     padding: 0 5px;
     margin: 5px;
     background-color: #E6E9ED;
     border-radius: 5px;
 }
-.project-container img{
+
+.project-container-header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 4rem;
+}
+
+.project-container-header a {
+    font-size: 1.7rem;
+    transition: color 1s;
+}
+
+.project-container-header a:hover {
+    color: #55189b;
+    transition: color 1s;
+}
+
+.project-container img {
     width: 100%;
     transition: all 1s ease;
 }
-.project-container img:hover{
-    transform: scale(1.7);
+
+.project-container img:hover {
+    transform: scale(1.2);
     transition: all 1s ease;
     cursor: pointer;
     border-radius: 1rem;
+}
+.project-container p {
+    padding: 1rem;
+    text-align: justify;
+}
+/* tecnologies */
+.tecnologies {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+.tecnologies__li {
+    background-color: #F7BA44;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    padding: 5px 10px;
+    width: auto;
+    margin: 1px;
+}
+.tecnologies__li i{
+    font-size: 16px;
+    margin-right: 5px;
+}
+.tecnologies__li span{
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
 }

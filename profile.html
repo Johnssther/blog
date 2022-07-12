@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/font/flaticon.css">
     <link rel="stylesheet" href="css/media-querys.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
         <section class="header-icons-container">
             <div class="icons">
-                <a href="https://github.com/Johnssther"><span class="flaticon-003-whatsapp"></span></a> <!-- Twitter -->
                 <a href="https://www.linkedin.com/in/john-alejandro-hernandez-3b28827a/"><span
                         class="flaticon-010-linkedin"></span></a> <!-- Linkendlin -->
-                <a href="assets/CV John Alejandro.pdf"><span class="flaticon-001-facebook"></span></a> <!-- Facebook -->
             </div>
         </section>
         <nav>
@@ -54,76 +55,139 @@
                 <h3>Proyectos</h3>
                 <div class="projects-main-container">
                     <article class="project-container">
-                        <h4>Mis Gastos</h4>
-                        <a href="https://misgastos.johnalejandro.tk/">
-                            <img src="assets/img/myimg/project-misgastos.png" alt="Aplicación de gastos">
-                        </a>
-                        <ul>
-                            <li>React JS</li>
-                            <li>Plantilla HTML</li>
-                            <li>Redux</li>
-                            <li>Conexión API</li>
-                        </ul>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam porro quaerat minus, iste odit
-                            consectetur laboriosam culpa eligendi! Iste velit ratione architecto fuga expedita excepturi
-                            nam consectetur ut corporis minus.</p>
-                    </article>
-                    <article class="project-container">
-                        <h4>App Card</h4>
-                        <a href="https://johnalejandro.tk/appcard/public/">
-                            <img src="assets/img/myimg/project-appcar.png" alt="Aplicación hecha en laravel Appcar">
-                        </a>
-                        <ul>
-                            <li>Laravel</li>
-                            <li>MySQL</li>
-                            <li>Relaciones Eloquent</li>
-                            <li>PHP</li>
-                        </ul>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam porro quaerat minus, iste odit
-                            consectetur laboriosam culpa eligendi! Iste velit ratione architecto fuga expedita excepturi
-                            nam consectetur ut corporis minus.</p>
-                    </article>
-                    <article class="project-container">
-                        <h4>Mascotas</h4>
+                        <div class="project-container-header">
+                            <h4>Mascotas</h4>
+                            <a href="https://github.com/Johnssther/posts">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
                         <a href="https://pets-delta.vercel.app/">
-                            <img src="assets/img/myimg/project-pets.png" alt="Aplicación de mascotas">
+                            <img src="assets/img/myimg/project-pets.png" alt="Portafolio - Blog">
                         </a>
-                        <ul>
-                            <li>React JS</li>
-                            <li>Hooks</li>
-                            <li>Redux</li>
-                            <li>Conexión API</li>
-                            <li>Auth0</li>
+                        <ul class="tecnologies">
+                            <li class="tecnologies__li"><span>  JS </span></li>
+                            <li class="tecnologies__li"><span> Hooks </span></li>
+                            <li class="tecnologies__li"><span> Redux </span></li>
+                            <li class="tecnologies__li"><span> Conexión API </span></li>
+                            <li class="tecnologies__li"><span> Auth0 </span></li>
                         </ul>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam porro quaerat minus, iste odit
                             consectetur laboriosam culpa eligendi! Iste velit ratione architecto fuga expedita excepturi
                             nam consectetur ut corporis minus.</p>
                     </article>
                     <article class="project-container">
-                        <h4>Portafolio - Blog</h4>
-                        <a href="https://johnalejandro.tk/blog/">
-                            <img src="assets/img/myimg/project-blog.png" alt="Aplicació Blog">
+                        <div class="project-container-header">
+                            <h4>Portafolio - Blog</h4>
+                        </div>
+                        <a href="https://johnalejandro.tk/blog">
+                            <img src="assets/img/myimg/project-blog.png" alt="Portafolio - Blog">
                         </a>
-                        <ul>
-                            <li>HTML 5</li>
-                            <li>CSS</li>
-                            <li>Javascript</li>
+                        <ul class="tecnologies">
+                            <li class="tecnologies__li"><i class="fa-brands fa-html5"></i> <span>HTML</span></li>
+                            <li class="tecnologies__li"><i class="fa-brands fa-css3-alt"></i> <span>CSS </span></li>
+                            <li class="tecnologies__li"><i class="fa-brands fa-sass"></i> <span>JS </span></li>
+                        </ul>
+
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam porro quaerat minus, iste odit
+                            consectetur laboriosam culpa eligendi! Iste velit ratione architecto fuga expedita excepturi
+                            nam consectetur ut corporis minus.</p>
+                    </article>
+                    <article class="project-container">
+                        <div class="project-container-header">
+                            <h4>App Card</h4>
+                            <a href="https://github.com/Johnssther/appcard.git">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+                        <a href="https://johnalejandro.tk/appcard/public/">
+                            <img src="assets/img/myimg/project-appcar.png" alt="Portafolio - Blog">
+                        </a>
+                        <ul class="tecnologies">
+                            <li class="tecnologies__li"><i class="fa-brands fa-html5"></i> <span>Laravel</span></li>
+                            <li class="tecnologies__li"><i class="fa-brands fa-css3-alt"></i> <span>MySQL </span></li>
+                            <li class="tecnologies__li"><i class="fa-brands fa-sass"></i> <span>Relaciones
+                                    Eloquent</span></li>
+                            <li class="tecnologies__li"><i class="fa-brands fa-sass"></i> <span>PHP </span></li>
                         </ul>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam porro quaerat minus, iste odit
                             consectetur laboriosam culpa eligendi! Iste velit ratione architecto fuga expedita excepturi
                             nam consectetur ut corporis minus.</p>
                     </article>
                     <article class="project-container">
-                        <h4>Centrodenegociosgc</h4>
-                        <a href="https://centrodenegociosgc.com/">
-                            <img src="assets/img/myimg/project-gc.png" alt="Aplicació Blog">
+                        <div class="project-container-header">
+                            <h4>Mis Gastos</h4>
+                        </div>
+                        <a href="https://misgastos.johnalejandro.tk/">
+                            <img src="assets/img/myimg/project-misgastos.png" alt=">Mis Gastos">
                         </a>
-                        <ul>
-                            <li>HTML 5</li>
-                            <li>CSS</li>
-                            <li>Javascript</li>
-                            <li>Pagina web</li>
-                            <li>Bootrap</li>
+                        <ul class="tecnologies">
+                            <li class="tecnologies__li"><i class="fa-brands fa-css3-alt"></i> <span>REACT </span></li>
+                            <li class="tecnologies__li"><i class="fa-brands fa-html5"></i> <span>REDUX</span></li>
+                            <li class="tecnologies__li"><i class="fa-brands fa-sass"></i> <span>API</span></li>
+                        </ul>
+
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam porro quaerat minus, iste odit
+                            consectetur laboriosam culpa eligendi! Iste velit ratione architecto fuga expedita excepturi
+                            nam consectetur ut corporis minus.</p>
+                    </article>
+                    <article class="project-container">
+                        <div class="project-container-header">
+                            <h4>Centrodenegociosgc</h4>
+                        </div>
+                        <a href="https://centrodenegociosgc.com">
+                            <img src="assets/img/myimg/project-gc.png" alt="Centrodenegociosgc">
+                        </a>
+                        <ul class="tecnologies">
+                            <li class="tecnologies__li"><i class="fa-brands fa-html5"></i> <span>HTML</span></li>
+                            <li class="tecnologies__li"><i class="fa-brands fa-css3-alt"></i> <span>CSS </span></li>
+                            <li class="tecnologies__li"><i class="fa-brands fa-sass"></i> <span>JS </span></li>
+                            <li class="tecnologies__li"><i class="fab fa-bootstrap"></i> <span>BOOTSTRAP </span></li>
+                        </ul>
+
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam porro quaerat minus, iste odit
+                            consectetur laboriosam culpa eligendi! Iste velit ratione architecto fuga expedita excepturi
+                            nam consectetur ut corporis minus.</p>
+                    </article>
+                    <article class="project-container">
+                        <div class="project-container-header">
+                            <h4>App-Test Dshboard</h4>
+                        </div>
+                        <a href="https://johnalejandro.tk/blog/others/grid/example.html">
+                            <img src="assets/img/myimg/project-dashboard.png" alt=">Dashboard">
+                        </a>
+                        <ul class="tecnologies">
+                            <li class="tecnologies__li"><i class="fa-brands fa-css3-alt"></i> <span>HTML </span></li>
+                            <li class="tecnologies__li"><i class="fa-brands fa-html5"></i> <span>CSS</span></li>
+                            <li class="tecnologies__li"><i class="fa-brands fa-sass"></i> <span>BEM</span></li>
+                        </ul>
+
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam porro quaerat minus, iste odit
+                            consectetur laboriosam culpa eligendi! Iste velit ratione architecto fuga expedita excepturi
+                            nam consectetur ut corporis minus.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="profile-main-projects">
+            <div class="grid-container">
+                <h3>Challengers Frontend Mentor</h3>
+                <div class="projects-main-container">
+                    <article class="project-container">
+                        <div class="project-container-header">
+                            <h4>Sección Testimonios grid principal</h4>
+                            <a href="https://github.com/Johnssther/fm-testimonials-grid-section-main.git">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+                        <a href="https://fm-testimonials-grid-section-main-beta.vercel.app/">
+                            <img src="assets/img/myimg/fm-testimonials-grid-section-main.png"
+                                alt="Seccion Testimonios grid principal">
+                        </a>
+                        <ul class="tecnologies">
+                            <li class="tecnologies__li"><i class="fa-brands fa-html5"></i> <span>HTML</span></li>
+                            <li class="tecnologies__li"><i class="fa-brands fa-css3-alt"></i> <span>CSS </span></li>
+                            <li class="tecnologies__li"><i class="fa-brands fa-sass"></i> <span>SASS </span></li>
+                            <li class="tecnologies__li"><i class="fas fa-th-large"></i> <span>GRID </span></li>
                         </ul>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam porro quaerat minus, iste odit
                             consectetur laboriosam culpa eligendi! Iste velit ratione architecto fuga expedita excepturi
@@ -151,9 +215,11 @@
             </div>
         </section>
     </main>
+
     <footer>
         <p id="copyright"></p>
     </footer>
+
     <script>
         const year = new Date().getFullYear();
         document.getElementById('copyright').innerHTML = `Copyright © 2020 - ${year} Desarrollado por John Alejandro`;
