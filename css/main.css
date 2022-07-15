@@ -367,10 +367,11 @@ footer p {
 }
 
 .project-container img:hover {
-    transform: scale(1.2);
     transition: all 1s ease;
     cursor: pointer;
     border-radius: 1rem;
+    transform: scale(1.1);
+    background-color: #22272d;
 }
 .project-container p {
     padding: 1rem;
@@ -385,7 +386,8 @@ footer p {
     margin: 1rem 0;
 }
 .tecnologies__li {
-    background-color: #F7BA44;
+    background-color: #FFFFFF;
+    color: #E27940;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
