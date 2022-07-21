@@ -99,13 +99,15 @@ $url: 'https://firebasestorage.googleapis.com/v0/b/coysafinance-1f247.appspot.co
         align-items: center;
         // background-color: rgba($primary, .8);
         text-align: center;
+
         &__name {
             font-size: 5rem;
             background-color: #E64E33;
             color: #fff;
             padding: 1rem;
         }
-        &__profession { 
+
+        &__profession {
             color: #ffab23;
             font-size: calc(3.5rem - 50%);
         }
@@ -131,6 +133,7 @@ $url: 'https://firebasestorage.googleapis.com/v0/b/coysafinance-1f247.appspot.co
         &_img {
             height: 15rem;
             width: 100%;
+
             img {
                 width: 100%;
                 height: 100%;
@@ -146,12 +149,13 @@ $url: 'https://firebasestorage.googleapis.com/v0/b/coysafinance-1f247.appspot.co
             font-size: 17px;
             letter-spacing: 3px;
         }
-        
+
         p {
             color: rgb(112, 113, 112);
             text-align: justify;
             word-spacing: 5px;
             line-height: 180%;
+            margin-bottom: 1.2rem;
         }
 
         .courses__item_date {
@@ -161,13 +165,26 @@ $url: 'https://firebasestorage.googleapis.com/v0/b/coysafinance-1f247.appspot.co
             text-align: center;
         }
 
-        button {
-            border: 1px solid #292929;
-            color: #E64E33;
+        a {
+            text-decoration: none;
+        }
+
+        .btn {
+            border: 1px solid #E64E33;
             text-transform: uppercase;
             padding: 10px;
             background-color: #fff;
             margin-top: 1rem;
+            font-weight: bold;
+            font-size: 14px;
+
+            &--primary {
+                color: #E64E33;
+            }
+
+            &--green {
+                color: #768d11;
+            }
 
             &:hover {
                 background-color: #E64E33;
@@ -253,17 +270,77 @@ $url: 'https://firebasestorage.googleapis.com/v0/b/coysafinance-1f247.appspot.co
     transform: translate(0, 0);
 }
 
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+
+// course detail
+.contenido {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title {
+       margin-bottom: 1rem;
+       text-transform: uppercase;
+       font-size: 24px;
+       border-bottom: 2px solid #E64E33;
+    }
+    &__loqueaprenderas {
+        width: 80%;
+        ul {
+            list-style:square;
+            li {
+                color: rgb(112, 113, 112);
+                text-align: justify;
+                line-height: 160%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+.footer {
+    height: auto;
+    background-color: #212121;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    &__contact {
+        letter-spacing: 3px;
+        p {
+            margin: 7px 0;
+        }
+    }
+    &__develop {
+        letter-spacing: 3px;
+        p {
+            margin: 7px 0;
+        }
+    }
+}
 @media screen and (max-width: 992px) {}
 
 @media screen and (max-width: 576px) {
     $font-size-nav: 12px;
+
     .main {
         .info {
             grid-column: 2 / 12;
             grid-row: 2 / 7;
+
             &__name {
                 font-size: 3rem;
             }
+
             &__profession {
                 font-size: calc(3rem - 50%);
             }

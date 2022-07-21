@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__brand">
+            <i class="bi bi-boxes"></i>
+        </div>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#entrenamientos">Entrenamientos</a></li>
+            </ul>
+        </nav>
+        <nav class="header__shopping">
+            <i class="bi bi-cart-fill"></i>
+        </nav>
+    </header>
+
+    <div class="section-courses container" id="cursos">
+        <div class="courses">
+            <div class="courses__item">
+                <div class="courses__item_img">
+                    <img src="https://cdn.pixabay.com/photo/2016/10/09/08/32/digital-marketing-1725340__480.jpg" alt="">
+                </div>
+                <h2>curso de marketing</h2>
+                <p class="courses__item_date"><i class="bi bi-calendar2-event-fill"></i> Inscripciones hasta: 18 Agosto
+                    2022</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam corporis tempore eveniet est
+                    repellat sit officiis, voluptatem quos quisquam quibusdam iste incidunt at, velit ipsum. Repudiandae
+                    pariatur quibusdam odio libero?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam corporis tempore eveniet est
+                    repellat sit officiis, voluptatem quos quisquam quibusdam iste incidunt at, velit ipsum. Repudiandae
+                    pariatur quibusdam odio libero?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam corporis tempore eveniet est
+                    repellat sit officiis, voluptatem quos quisquam quibusdam iste incidunt at, velit ipsum. Repudiandae
+                    pariatur quibusdam odio libero?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam corporis tempore eveniet est
+                    repellat sit officiis, voluptatem quos quisquam quibusdam iste incidunt at, velit ipsum. Repudiandae
+                    pariatur quibusdam odio libero?</p>
+                <a href="./course.html" class="btn btn--primary">inscribirse</a>
+                <div class="contenido">
+                    <h1 class="contenido__title">Lo que aprenderas</h1>
+                    <div class="contenido__loqueaprenderas">
+                        <ul>
+                            <li>Aprende a programar desde cero.</li>
+                            <li>Aprende a configurar tu entorno de aprendizaje en Windows, Ubuntu y Mac OS.</li>
+                            <li>Aprende sobre los tipos de datos más importantes en la programación.</li>
+                            <li>Aprende a utilizar e interpretar las expresiones en la programación.
+                            </li>
+                            <li>Aprende a configurar tu entorno de desarrollo con Visual Studio Code.</li>
+                            <li>Aprende a programar clases y objetos utilizando la herencia.</li>
+                            <li>Aprende todo tipo de funcionalidades avanzadas en Python como la comprensión de listas, los decoradores y generadores, funciones lambda y expresiones regulares.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__contact">
+            <p>+57 3245345</p>
+            <p>info@elkinsuarez.com</p>
+        </div>
+        <div class="footer__develop">
+            <p>John A. Hernandez 2020 - 2022</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            let elements = document.getElementsByClassName('scroll-content');
+            let screenSize = window.innerHeight;
+
+            for (var i = 0; i < elements.length; i++) {
+                let element = elements[i];
+
+                if (element.getBoundingClientRect().top < screenSize) {
+                    element.classList.add('visible');
+                } else {
+                    // element.classList.remove('visible');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -133,6 +133,7 @@
   text-align: justify;
   word-spacing: 5px;
   line-height: 180%;
+  margin-bottom: 1.2rem;
 }
 .courses__item .courses__item_date {
   background-color: #f8bc62;
@@ -140,15 +141,25 @@
   font-size: 14px;
   text-align: center;
 }
-.courses__item button {
-  border: 1px solid #292929;
-  color: #E64E33;
+.courses__item a {
+  text-decoration: none;
+}
+.courses__item .btn {
+  border: 1px solid #E64E33;
   text-transform: uppercase;
   padding: 10px;
   background-color: #fff;
   margin-top: 1rem;
+  font-weight: bold;
+  font-size: 14px;
 }
-.courses__item button:hover {
+.courses__item .btn--primary {
+  color: #E64E33;
+}
+.courses__item .btn--green {
+  color: #768d11;
+}
+.courses__item .btn:hover {
   background-color: #E64E33;
   color: #fff;
 }
@@ -219,6 +230,60 @@
 .visible {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.contenido {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenido__title {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 24px;
+  border-bottom: 2px solid #E64E33;
+}
+.contenido__loqueaprenderas {
+  width: 80%;
+}
+.contenido__loqueaprenderas ul {
+  list-style: square;
+}
+.contenido__loqueaprenderas ul li {
+  color: rgb(112, 113, 112);
+  text-align: justify;
+  line-height: 160%;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  height: auto;
+  background-color: #212121;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.footer__contact {
+  letter-spacing: 3px;
+}
+.footer__contact p {
+  margin: 7px 0;
+}
+.footer__develop {
+  letter-spacing: 3px;
+}
+.footer__develop p {
+  margin: 7px 0;
 }
 
 @media screen and (max-width: 576px) {
