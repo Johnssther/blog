@@ -217,7 +217,6 @@ button:hover {
   .container {
     width: 98%;
   }
-
   .gallery {
     grid-template-rows: repeat(2, auto);
   }
@@ -245,8 +244,10 @@ button:hover {
   background-color: #DDD7FA;
   gap: 5px;
   background-color: #e5e5f7;
-  background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
-  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+  background-image: url("https://cdn.pixabay.com/photo/2022/07/05/16/53/graz-7303533_960_720.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
 }
 .profile__item {
   display: flex;
@@ -258,6 +259,7 @@ button:hover {
   height: 15rem;
   border-radius: 50%;
   object-fit: cover;
+  object-position: left;
   border: 5px solid rgb(124, 74, 175);
   padding: 3px;
 }
