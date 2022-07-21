@@ -1,10 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    color: #6f6f6f;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
 $primary: #E64E33;
 $secondary: #fff;
 
@@ -29,7 +41,9 @@ $url: 'https://firebasestorage.googleapis.com/v0/b/coysafinance-1f247.appspot.co
         justify-content: center;
         align-items: center;
         font-size: 2.5rem;
-        color: #fff;
+        a {
+            color: #fff;
+        }
     }
 
     &__nav {
@@ -285,16 +299,20 @@ $url: 'https://firebasestorage.googleapis.com/v0/b/coysafinance-1f247.appspot.co
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     &__title {
-       margin-bottom: 1rem;
-       text-transform: uppercase;
-       font-size: 24px;
-       border-bottom: 2px solid #E64E33;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-size: 24px;
+        border-bottom: 1px solid #E64E33;
     }
+
     &__loqueaprenderas {
         width: 80%;
+
         ul {
-            list-style:square;
+            list-style: square;
+
             li {
                 color: rgb(112, 113, 112);
                 text-align: justify;
@@ -314,19 +332,24 @@ $url: 'https://firebasestorage.googleapis.com/v0/b/coysafinance-1f247.appspot.co
     justify-content: space-around;
     align-items: center;
     text-align: center;
+
     &__contact {
         letter-spacing: 3px;
+
         p {
             margin: 7px 0;
         }
     }
+
     &__develop {
         letter-spacing: 3px;
+
         p {
             margin: 7px 0;
         }
     }
 }
+
 @media screen and (max-width: 992px) {}
 
 @media screen and (max-width: 576px) {
