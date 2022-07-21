@@ -7,6 +7,9 @@
 
 $primary: #E64E33;
 $secondary: #fff;
+
+$font-size-nav: 15px;
+
 $url: 'https://cdn.pixabay.com/photo/2016/04/26/22/31/bride-1355473_960_720.jpg';
 $url: 'https://firebasestorage.googleapis.com/v0/b/coysafinance-1f247.appspot.com/o/files%2FIMG_9586-1-2.jpeg?alt=media&token=888f1a29-f998-4e66-a9c3-4d921a02b5f3';
 
@@ -52,6 +55,9 @@ $url: 'https://firebasestorage.googleapis.com/v0/b/coysafinance-1f247.appspot.co
                     justify-content: center;
                     align-items: center;
                     border-bottom: 3px solid $primary;
+                    font-size: $font-size-nav;
+                    text-transform: uppercase;
+                    font-weight: bold;
 
                     &:hover {
                         color: $secondary;
@@ -67,14 +73,15 @@ $url: 'https://firebasestorage.googleapis.com/v0/b/coysafinance-1f247.appspot.co
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.3rem;
         color: #fff;
+        font-size: $font-size-nav;
+        font-weight: bold;
     }
 }
 
 .main {
-    // background-image: linear-gradient(90deg, rgba(16, 16, 16, .3), rgba(16, 16, 16, .8)), url('https://cdn.pixabay.com/photo/2016/04/26/22/31/bride-1355473_960_720.jpg');
     background-image: url($url);
+    background-image: linear-gradient(90deg, rgba(16, 16, 16, .3), rgba(16, 16, 16, .8)), url($url);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -87,15 +94,20 @@ $url: 'https://firebasestorage.googleapis.com/v0/b/coysafinance-1f247.appspot.co
         grid-column: 7 / 13;
         grid-row: 1 / 13;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         // background-color: rgba($primary, .8);
-
-        h1 {
-            font-size: 3.5rem;
-            color: #fff;
+        text-align: center;
+        &__name {
+            font-size: 5rem;
             background-color: #E64E33;
+            color: #fff;
             padding: 1rem;
+        }
+        &__profession { 
+            color: #ffab23;
+            font-size: calc(3.5rem - 50%);
         }
     }
 }
@@ -107,41 +119,50 @@ $url: 'https://firebasestorage.googleapis.com/v0/b/coysafinance-1f247.appspot.co
 
 .courses {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: 1fr;
     gap: 1rem;
 
     &__item {
-        color: #E64E33;
         padding: 1rem;
-        border-radius: 10px;
+        border-radius: 5px;
+        background-color: #fff;
 
         &_img {
-            height: 18rem;
-            background-color: #4a36a8;
+            height: 15rem;
             width: 100%;
-
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                border-radius: 12px;
             }
         }
 
         h2 {
-            text-transform: capitalize;
+            color: #191919;
+            text-transform: uppercase;
             margin: 1rem 0;
+            font-size: 17px;
+            letter-spacing: 3px;
         }
-
+        
         p {
-            color: rgb(83, 57, 57);
+            color: rgb(112, 113, 112);
             text-align: justify;
             word-spacing: 5px;
             line-height: 180%;
         }
 
+        .courses__item_date {
+            background-color: #f8bc62;
+            color: #212121;
+            font-size: 14px;
+            text-align: center;
+        }
+
         button {
-            border: 1px solid #E64E33;
+            border: 1px solid #292929;
             color: #E64E33;
             text-transform: uppercase;
             padding: 10px;
@@ -230,4 +251,22 @@ $url: 'https://firebasestorage.googleapis.com/v0/b/coysafinance-1f247.appspot.co
 .visible {
     opacity: 1;
     transform: translate(0, 0);
-  }
+}
+
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 576px) {
+    $font-size-nav: 12px;
+    .main {
+        .info {
+            grid-column: 2 / 12;
+            grid-row: 2 / 7;
+            &__name {
+                font-size: 3rem;
+            }
+            &__profession {
+                font-size: calc(3rem - 50%);
+            }
+        }
+    }
+}
