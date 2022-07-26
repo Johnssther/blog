@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #2e2424;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pomodoro {
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+    background-color: rgb(61, 72, 173);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(188, 203, 242);
+    color: white;
+
+    &__time {
+        font-size: 4rem;
+    }
+}

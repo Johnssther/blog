@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="pomodoro">
+            <p class="pomodoro__time"><span id="time_minute">25</span>:<span id="time_second">00</span></p>
+            <p class="pomodoro__poin">e</p>
+            <p>estudiando</p>
+        </div>
+    </div>
+    <script>
+        let time_second = 60
+
+        let time_minute = 25
+        let time_elementmin = document.getElementById('time_minute')
+        if (time_minute === 0) {
+                time_elementmin.innerHTML = `00`
+            } else {
+                time_minute = time_minute-1
+                time_elementmin.innerHTML = `${time_minute}`
+            }
+        setInterval(() => {
+            if (time_minute === 0) {
+                time_elementmin.innerHTML = `00`
+            } else {
+                time_minute = time_minute-1
+                time_elementmin.innerHTML = `${time_minute}`
+            }
+            time_second = 60
+        }, 60000);
+
+        
+        let time_element = document.getElementById('time_second')
+        setInterval(() => {
+            if (time_second === 0) {
+                time_element.innerHTML = `00`
+            } else {
+                time_second = time_second-1
+                time_element.innerHTML = `${time_second}`
+            }
+        }, 1000);
+
+    </script>
+</body>
+</html>
