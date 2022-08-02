@@ -4,4 +4,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+// Initializations
 const app = (0, express_1.default)();
+// Settings
+app.set('port', 3000);
+// Middlewares
+// Routes
+// Static Files
+// Starting the server
+app.listen(app.get('port'), () => {
+    console.log(`Servidor inicializado en el puerto ${app.get('port')} localhost:${app.get('port')}`);
+});
