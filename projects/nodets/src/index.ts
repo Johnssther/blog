@@ -7,12 +7,11 @@ import IndexRoutes from './routes'
 // Initializations
 const app = express();
 
-
 // Settings
 app.set('port', process.env.PORT || 3000);
 
+// Settings 
 app.set("views", path.join(__dirname, "views"));
-
 const exphbs = create({
     extname: '.hbs',
     defaultLayout: 'main',
