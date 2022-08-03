@@ -3,11 +3,10 @@ import { Router, Request } from 'express';
 const router:Router =  Router();
 
 router.get('/', (req: Request, res) => {
-    res.send('books');
+    res.render('books');
 });
 router.get('/create', (req: Request, res) => {
-    res.render('books/index', { title: 'welcome to books app' });
-    // res.send('Formulario para crear un libro');
+    res.render('books/create', { title: 'welcome to books app' });
 });
 
 export default router;

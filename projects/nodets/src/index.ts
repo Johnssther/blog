@@ -28,6 +28,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Routes
+app.get('/', (req, res) => {
+    res.render('index');
+});
 app.use('/books', IndexRoutes);
 
 // Static Files
