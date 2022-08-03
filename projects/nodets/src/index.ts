@@ -1,30 +1,27 @@
 import express from 'express';
 import path from 'path';
-import { create } from 'express-handlebars';
+import {create} from "express-handlebars";
 
 import IndexRoutes from './routes'
 
 // Initializations
 const app = express();
-const hbs = create({
-    extname: '.hbs',
-    layoutsDir: path.join(app.get('views'), 'layouts'),
-    partialsDir: path.join(app.get('views'), 'Partials'),
-    helpers: require('./lib/helpers')
-});
+
 
 // Settings
 app.set('port', process.env.PORT || 3000);
 
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, 'views'))
+app.set("views", path.join(__dirname, "views"));
 
-// app.set('.hbs', exphbs.engine({
-//     extname:'.hbs',
-//     layoutsDir: path.join(app.get('views'), 'layouts'),
-//     partialsDir: path.join(app.get('views'), 'Partials'),
-// }))
+const exphbs = create({
+    extname: '.hbs',
+    defaultLayout: 'main',
+    layoutsDir: path.join(app.get('views'), 'layouts'),
+    partialsDir: path.join(app.get('views'), 'partials'),
+    helpers: require('./lib/helpers')
+});
+app.engine(".hbs", exphbs.engine);
+app.set("view engine", ".hbs");
 
 // Middlewares
 app.use(express.json());
