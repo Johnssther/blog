@@ -11,7 +11,7 @@ const app = express();
 app.set('port', process.env.PORT || 3000);
 
 // Settings 
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "resources/views"));
 const exphbs = create({
     extname: '.hbs',
     defaultLayout: 'main',
