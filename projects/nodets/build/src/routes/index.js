@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const IndexController_1 = require("../controller/IndexController");
+const BookController_1 = require("../controller/BookController");
 const router = (0, express_1.Router)();
 router.get('/', IndexController_1.indexController.index);
-router.get('/create', (req, res) => {
-    res.render('books/create', { title: 'welcome to books app' });
-});
+router.get('/create', BookController_1.bookController.create);
+router.get('/api', BookController_1.bookController.index);
 exports.default = router;

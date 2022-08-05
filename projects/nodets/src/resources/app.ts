@@ -2,11 +2,10 @@ import './sass/style.scss'
 
 
 let dateInitial = new Date('07-01-2022');
-let date_currency = String(dateInitial.getMonth() + 1).padStart(2, '0') + '-' + String(dateInitial.getDate()).padStart(2, '0') + '-' + dateInitial.getFullYear();
-let dayInitial = String(new Date().getDate()).padStart(2, '0');
-console.log(dayInitial);
+let date_currency: string = String(dateInitial.getMonth() + 1).padStart(2, '0') + '-' + String(dateInitial.getDate()).padStart(2, '0') + '-' + dateInitial.getFullYear();
+let dayInitial: string = String(new Date().getDate()).padStart(2, '0');
 // events
-document.getElementById('datePrevious').addEventListener('click', () => {
+document.getElementById('datePrevious')?.addEventListener('click', () => {
     let d = new Date(date_currency);
     d.setMonth(d.getMonth() - 1);
 
@@ -16,30 +15,31 @@ document.getElementById('datePrevious').addEventListener('click', () => {
     renderCalendar(date_currency)
 
 })
-document.getElementById('dateLater').addEventListener('click', () => {
+document.getElementById('dateLater')?.addEventListener('click', () => {
     let d = new Date(date_currency);
     d.setMonth(d.getMonth() + 1);
-    
+
     let date = d;
     date_currency = String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0') + '-' + date.getFullYear();
     renderCalendar(date_currency)
 
 })
-document.getElementById('yearSearch').addEventListener('click', () => {
-    let year = document.getElementById('year').value
-    let d = new Date('1-1-'+year);
-    
+document.getElementById('yearSearch')?.addEventListener('click', () => {
+    const yearHtm = document.getElementById('year') as HTMLInputElement | null;
+
+    const year: string = yearHtm!.value;
+
+    let d = new Date('1-1-' + year);
+
     let date = d;
     date_currency = String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0') + '-' + date.getFullYear();
     renderCalendar(date_currency)
-})  
+})
 renderCalendar(date_currency)
-function renderCalendar(date) {
-    console.log(date);
+function renderCalendar(date: string) {
     const fecha = new Date(date);
     let year = fecha.getFullYear();
     let month = monthName(fecha.getMonth());
-    let day_name = dayName(fecha.getDay())
     const dias_mes_actual = diasDelMesYAñoActual(fecha);
 
     let template_month = `
@@ -64,53 +64,36 @@ function renderCalendar(date) {
     }
 
     for (let index = 1; index <= dias_mes_actual; index++) {
-        if (dayInitial == index) {
+        if (dayInitial === String(index)) {
             template_month += `<div class="calendar__item calendar__item--festive">${index}</div>`
         } else {
             template_month += `<div class="calendar__item">${index}</div>`
         }
     }
 
-    document.getElementById('calendar').innerHTML = template_month
+    const calendar =  document.getElementById('calendar');
+    if(calendar != null) {
+        calendar.innerHTML = template_month;
+    }
 
 }
 
-function diasEnUnMes(mes, año) {
-    return new Date(año, mes, 0).getDate();
-}
-function diasDelMesYAñoActual(fecha) {
+function diasDelMesYAñoActual(fecha: Date) {
     return new Date(fecha.getFullYear(), fecha.getMonth() + 1, 0).getDate();
 }
 
-
-function diaSemana(año, mes, dia) {
-    let dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
-    let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-
-    let date = new Date(año, mes, dia);
-
-    let fechaNum = date.getDate() + 1;
-    let mes_name = date.getMonth();
-}
-diaSemana(2022, 9, 0)
-
-function monthName(mes) {
+function monthName(mes: number) {
     let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
     return meses[mes]
 }
-function dayName(day) {
-    let dias = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
-    return dias[day]
-}
-
 
 // sidebar
-document.getElementById('btn-close').addEventListener('click', () => {
-    document.getElementById('sidebar').classList.add('sidebar--active');
-    document.getElementById('body').classList.remove('block-scroll');
+document.getElementById('btn-close')?.addEventListener('click', () => {
+    document.getElementById('sidebar')?.classList.add('sidebar--active');
+    document.getElementById('body')?.classList.remove('block-scroll');
 })
-document.getElementById('btn-open').addEventListener('click', (e) => {
+document.getElementById('btn-open')?.addEventListener('click', (e) => {
     e.preventDefault();
-    document.getElementById('sidebar').classList.remove('sidebar--active');
-    document.getElementById('body').classList.add('block-scroll');
+    document.getElementById('sidebar')?.classList.remove('sidebar--active');
+    document.getElementById('body')?.classList.add('block-scroll');
 })

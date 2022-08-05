@@ -1,4 +1,4 @@
-import {Request, Response} from 'express' 
+import { Request, Response } from 'express'
 
 class BookController {
 
@@ -9,8 +9,8 @@ class BookController {
             pages: number,
             publish: Date
         }
-    
-        const books:IBook[] = [
+
+        const books: IBook[] = [
             {
                 name: 'libro 1',
                 author: 'author 1',
@@ -29,7 +29,7 @@ class BookController {
                 pages: 69,
                 publish: new Date(),
             }
-        ]
+        ];
         res.json(books);
     }
 
