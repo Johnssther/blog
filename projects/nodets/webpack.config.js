@@ -1,3 +1,5 @@
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
     mode: 'development',
     entry: './src/resources/app.ts',
@@ -11,6 +13,13 @@ module.exports = {
                 test: /\.s[ac]ss$/i,
                 use: [
                     "style-loader",
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            esModule: false,
+                        },
+                    },
+                    MiniCssExtractPlugin.loader,
                     "css-loader",
                     "sass-loader",
                 ],
@@ -19,12 +28,7 @@ module.exports = {
             {
                 test: /\.m?js$/,
                 exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
+                use: ['babel-loader']
             },
             {
                 test: /\.tsx?$/,
@@ -33,8 +37,11 @@ module.exports = {
             },
         ]
     },
+    plugins: [
+        new MiniCssExtractPlugin()
+    ],
     resolve: {
         // Add `.ts` and `.tsx` as a resolvable extension.
-        extensions: [".ts", ".tsx", ".js"]
+        extensions: [".ts", ".tsx", ".js", ".json", ".jsx"]
     },
 }
