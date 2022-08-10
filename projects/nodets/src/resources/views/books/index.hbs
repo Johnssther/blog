@@ -3,6 +3,7 @@
 <div class="books container">
     {{#each data}}
     <div class="books__item">
+        <p class="books__item_id">{{this.id}}</p>
         <h2>{{this.name}}</h2>
         <h3>{{this.author}}</h3>
         <p>{{this.pages}}</p>

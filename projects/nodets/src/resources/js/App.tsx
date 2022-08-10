@@ -1,12 +1,11 @@
-// App.tsx
-import React from "react";
+import React from 'react'
+import Card from './src/components/Card'
 
-const App = () => {
-  return (
-    <div>
-      <h2>App component!</h2>
-    </div>
-  );
-};
-
-export default App;
+const App: React.FC = () => {
+    return (
+        <div>
+            <Card />
+        </div>
+    )
+}
+export default App

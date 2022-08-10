@@ -1,8 +1,6 @@
 import './sass/style.scss'
 
 window.addEventListener('load', (event) => {
-    console.log(event);
-    
 
     let dateInitial = new Date('07-01-2022');
     let date_currency: string = String(dateInitial.getMonth() + 1).padStart(2, '0') + '-' + String(dateInitial.getDate()).padStart(2, '0') + '-' + dateInitial.getFullYear();
@@ -14,7 +12,6 @@ window.addEventListener('load', (event) => {
 
         let date = d;
         date_currency = String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0') + '-' + date.getFullYear();
-        console.log(date_currency);
         renderCalendar(date_currency)
 
     })

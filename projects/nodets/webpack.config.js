@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: 'development',
-    entry: './src/resources/app.ts',
+    entry: ['./src/resources/app.ts', './src/resources/appreact.tsx'],
     output: {
         filename: 'bundle.js',
         path: __dirname + '/src/public'
@@ -19,7 +19,6 @@ module.exports = {
                             esModule: false,
                         },
                     },
-                    MiniCssExtractPlugin.loader,
                     "css-loader",
                     "sass-loader",
                 ],
